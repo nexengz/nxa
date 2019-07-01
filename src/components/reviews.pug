@@ -1,0 +1,21 @@
+section.reviews
+    .container.container__reviews
+        .reviews__title
+            h2.section-title Что обо мне говорят
+            .reviews-slider__controls
+                .reviews-slider__control.reviews-slider__control--left <
+                .reviews-slider__control.rreviews-slider__control--right >
+        ul.reviews-slider
+            - for (var i = 0; i<2; i++)
+                li.reviews-slider__item
+                    .reviews-slider__image
+                        +icon('quote', 'reviews-slider__icon')
+                    .quote
+                        .quote__text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium
+                        .quote__author
+                            .user.user--horizontal
+                                .user__avatar
+                                    +image('content/user.jpg', 'user__avatar-pic')
+                                .user__data
+                                    .user__name Ковальчук Дмитрий
+                                    .user__occ Основатель Loftschool

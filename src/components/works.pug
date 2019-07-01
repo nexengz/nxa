@@ -1,0 +1,40 @@
+- var tags = ['HTML5', 'CSS3', 'JavaScript'];
+- var sliderImages = ['4', '3', '2', '1'];
+
+section.works
+    .container.container--works
+        .works__titleyarn
+            h2.section-title Мои работы
+        .works-content
+            .works-content--left
+                .slider
+                    .slider__wrapper
+                        .slider__inner-wrapper
+                            .slider__active-image
+                            .slider__slides
+                                each sliderImage in sliderImages
+                                    .slider__slide(style=`background-image: url('${require('images/content/'+sliderImage+'.jpg')}')`)
+                        .slider__nav
+                            .slider__nav-button.slider__nav-button--up >
+                            .slider__nav-button.slider__nav-button--down >
+                    .slider__current-number 4
+            .works-content--right
+                .works-content__wrapper
+                    ul.works-content__tags
+                        each tag in tags
+                            li.works-content__tags-item #{tag}
+                    h3.works-content__title Сайт компании
+                    .works-content__info Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eveniet, fuga fugiat illum incidunt itaque nam necessitatibus nihil nostrum numquam optio perferendis possimus quidem recusandae sed suscipit veritatis voluptatem!
+                    .works-content__link
+                        a(href="" title="" target="_blank").works-content__link-item
+                            +icon('link', 'works-content__item-img')
+                            | Посмотреть сайт
+.triangles.triangles--second
+    svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
+        polygon(
+            points="0,0 1000,100 1000,0"
+        )
+    svg.triangles__item.triangles__item--right(viewBox="0 0 1000 100" preserveAspectRatio="none")
+        polygon(
+            points="0,0 0,100 1000,0"
+        )

@@ -1,0 +1,50 @@
+.about {
+    min-height: 750px;
+    color: rgba(65, 76, 99, 0.5);
+
+    &__left {
+        width: 46%;
+        padding-right: 150px;
+    }
+    &__right {
+        width: 54%;
+    }
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding: 125px 0;
+    }
+    &__welcome {
+        color: rgba(65, 76, 99, 0.5);
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    &__username {
+        font-size: 36px;
+        font-weight: bold;
+        color: #414c63;
+        margin-bottom: 30px;
+    }
+    &__desc {
+        margin-bottom: 105px;
+    }
+    &__ps {
+        font-style: italic;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: -60px;
+            top: 0;
+            font-style: italic;
+            transform: rotate(10deg);
+            content: '*';
+            color: rgba(255, 0, 0, 0.1);
+            font-size: 48px;
+
+        }
+    }
+
+
+}
+

@@ -1,0 +1,85 @@
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    padding: 70px 0;
+
+    &__wrapper {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.88;
+        text-align: left;
+        color: #414c634c;
+        width: 47%;
+        margin-bottom: 35px;
+        display: block;
+        position: relative;
+
+        &--name {
+            margin-right: 6%;
+        }
+        &--email {
+
+        }
+        &--text {
+            width: 100%;
+            margin-bottom: 55px;
+
+        }
+    }
+    &__label {
+        padding-left: 50px;
+        margin-bottom: 5px;
+        display: block;
+    }
+    &__input {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        border-bottom: 1px solid #414c63;
+        padding: 3px 5px 7px 50px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 2.67;
+        color: #414c63;
+
+        &:focus {
+            border: 0;
+        }
+
+        &--name {
+
+        }
+        &--email {
+
+        }
+        &--text {
+            line-height: 2;
+            padding-bottom: 15px;
+
+        }
+    }
+    &__submit-button {
+        width: 40%;
+        height: 80px;
+        background-image: linear-gradient(to right, #ad00ed, #5500f2);
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffffff;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        text-transform: uppercase;
+    }
+    &__icon-wrapper {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 30px;
+        height: 30px;
+        text-align: left;
+    }
+    &__icon {
+        fill: rgba(#414c63,0.3);
+    }
+}
+
