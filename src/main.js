@@ -14,6 +14,9 @@ var parallax = (function () {
     bg6 = document.querySelector('.parallax-header__item--6'),
     bg7 = document.querySelector('.parallax-header__item--7');
 
+  console.log('a');
+
+
   return {
     move: function(block, windowScroll, strafeAmount) {
       var strafe = windowScroll / -strafeAmount + '%';
