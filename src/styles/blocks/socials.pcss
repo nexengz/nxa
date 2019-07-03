@@ -14,6 +14,21 @@
         width: 25px;
         height: 31px;
         display: block;
+        transition: 0.2s ease-in-out all;
+
+        &:hover {
+            border-color: $main-color;
+            transition: 0.2s ease-in-out all;
+
+            .socials__icon {
+                fill: $main-color;
+                transition: 0.2s ease-in-out all;
+            }
+        }
+    }
+    &__icon {
+        fill: $text-color;
+        transition: 0.2s ease-in-out all;
     }
 
     &--footer {
@@ -21,15 +36,19 @@
             margin-right: 20px;
         }
         .socials__link {
-            border: 1px solid grey;
+            border: 1px solid #fff;
             border-radius: 50%;
             width: 50px;
             height: 50px;
             position: relative;
+            transition: 0.2s ease-in-out all;
 
             &:hover {
+                border-color: $main-color;
+                transition: 0.2s ease-in-out all;
                 .socials__icon {
-                    fill: green;
+                    fill: $main-color;
+                    transition: 0.2s ease-in-out all;
                 }
             }
         }
@@ -41,6 +60,7 @@
             width: 20px;
             height: 20px;
             fill: #fff;
+            transition: 0.2s ease-in-out all;
         }
     }
 }

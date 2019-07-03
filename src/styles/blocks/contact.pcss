@@ -9,7 +9,7 @@
         font-weight: 600;
         line-height: 1.88;
         text-align: left;
-        color: #414c634c;
+        color: rgba($text-color, 0.3);
         width: 47%;
         margin-bottom: 35px;
         display: block;
@@ -24,7 +24,14 @@
         &--text {
             width: 100%;
             margin-bottom: 55px;
-
+        }
+        &:hover .contact__input, .contact__input:focus {
+            border-color: $main-color;
+            transition: 0.2s ease-in-out all;
+        }
+        &:hover .contact__icon, &:focus .contact__icon {
+            fill: $main-color;
+            transition: 0.2s ease-in-out all;
         }
     }
     &__label {
@@ -36,16 +43,14 @@
         width: 100%;
         border: 0;
         background: transparent;
-        border-bottom: 1px solid #414c63;
+        border-bottom: 1px solid $text-color;
         padding: 3px 5px 7px 50px;
         font-size: 18px;
         font-weight: bold;
         line-height: 2.67;
-        color: #414c63;
-
-        &:focus {
-            border: 0;
-        }
+        color: $text-color;
+        outline: none;
+        transition: 0.2s ease-in-out all;
 
         &--name {
 
@@ -62,13 +67,20 @@
     &__submit-button {
         width: 40%;
         height: 80px;
-        background-image: linear-gradient(to right, #ad00ed, #5500f2);
+        background-image: linear-gradient(to right, rgb(173,0,237) 0%, rgb(129,0,240) 48%, rgb(85,0,242) 100%);
+        background-image: -moz-linear-gradient( 0deg, rgb(173,0,237) 0%, rgb(129,0,240) 48%, rgb(85,0,242) 100%);
         font-size: 18px;
         font-weight: bold;
         color: #ffffff;
         border-top-left-radius: 40px;
         border-bottom-right-radius: 40px;
         text-transform: uppercase;
+        transition: 0.2s ease-in-out all;
+
+        &:hover {
+            background-image: linear-gradient(to right, rgb(187,0,255) 0%, rgb(138,0,255) 48%, rgb(89,0,255) 100%);
+            transition: 0.2s ease-in-out all;
+        }
     }
     &__icon-wrapper {
         position: absolute;
@@ -79,7 +91,8 @@
         text-align: left;
     }
     &__icon {
-        fill: rgba(#414c63,0.3);
+        fill: rgba($text-color,0.3);
+        transition: 0.2s ease-in-out all;
     }
 }
 

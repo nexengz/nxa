@@ -3,8 +3,10 @@ section.reviews
         .reviews__title
             h2.section-title Что обо мне говорят
             .reviews-slider__controls
-                .reviews-slider__control.reviews-slider__control--left <
-                .reviews-slider__control.rreviews-slider__control--right >
+                .reviews-slider__control.reviews-slider__control--left
+                    +icon('arrow-down', 'reviews-slider__control-arrow-icon')
+                .reviews-slider__control.rreviews-slider__control--right
+                    +icon('arrow-down', 'reviews-slider__control-arrow-icon')
         ul.reviews-slider
             - for (var i = 0; i<2; i++)
                 li.reviews-slider__item
