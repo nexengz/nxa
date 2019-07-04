@@ -1,8 +1,17 @@
 .user-skills {
-    padding: 120px 0 40px 10%;
+    padding: 120px 0 40px 11%;
+
+    @include desktop {
+        padding: 120px 0 10px 11%;
+    }
+    @include tablets {
+        padding: 45px 0 10px;
+    }
 
     &__item {
-        margin-bottom: 5px;
+        margin-bottom: 40px;
+        @include desktop {
+        }
     }
 }
 

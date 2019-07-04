@@ -1,5 +1,11 @@
 .user-info {
     text-align: center;
+    @include desktop {
+        display: flex;
+    }
+    @include tablets {
+        display: block;
+    }
 
     &__desc {
         color: rgba($text-color, 0.6);
@@ -7,11 +13,30 @@
         font-weight: 600;
         margin-bottom: 33px;
         line-height: 1.67;
+
+        @include desktop {
+            text-align: right;
+            padding-right: 40px;
+        }
+        @include tablets {
+            display: block;
+            text-align: center;
+            padding-right: 0;
+        }
+        @include phones {
+            margin-bottom: 0;
+        }
     }
     &__name {
         font-size: 72px;
         font-weight: 800;
         font-style: normal;
         line-height: 0.83;
+
+        @include phones {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
     }
+
 }

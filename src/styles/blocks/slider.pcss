@@ -1,19 +1,50 @@
 .slider {
     position: relative;
     display: flex;
+    padding-top: 90px;
+
+    @include desktop {
+        padding-top: 65px;
+    }
+    @include tablets {
+        flex-direction: column;
+    }
 
     &__content {
         &--left {
             padding-right: 150px;
             flex: 0.7;
+            @include desktop {
+                padding-right: 120px;
+            }
+            @include tablets {
+                padding-right: 75px;
+                flex: 1;
+            }
+            @include phones {
+                padding: 0;
+                flex: 1;
+            }
         }
         &--right {
             flex: 0.3;
+            @include tablets {
+                flex: 1;
+                text-align: center;
+            }
+            @include phones {
+                text-align: left;
+                width: 80%;
+                margin: 0 auto;
+            }
         }
     }
     &__wrapper {
         position: relative;
         margin-bottom: 70px;
+        @include tablets {
+            margin-bottom: 20px;
+        }
     }
     &__inner-wrapper {
         width: 100%;
@@ -33,6 +64,10 @@
         height: 100px;
         display: flex;
         box-shadow: -30px 0 70px rgba(0,0,0,0.8);
+        @include phones {
+            bottom: 0;
+        }
+
     }
     &__slide {
         height: 100%;
@@ -42,6 +77,9 @@
         position: relative;
         z-index: 5;
         transition: 0.2s ease-in-out all;
+        @include phones {
+            display: none;
+        }
 
         &:hover .slider__slide-image {
             opacity: 0.5;
@@ -58,6 +96,9 @@
         z-index: 1;
         display: flex;
         flex-direction: column;
+        @include phones {
+            right: 0;
+        }
     }
     &__nav-button {
         background: $text-color;
@@ -84,6 +125,9 @@
     &__tags {
         display: flex;
         margin-bottom: 40px;
+        @include tablets {
+            justify-content: center;
+        }
     }
     &__tags-item {
         background: rgba(#7aa0c5, 0.1);
@@ -104,13 +148,21 @@
         position: absolute;
         z-index: -1;
         right: -150px;
-        top: 40%;
+        top: 0;
         font-size: 400px;
         font-weight: 800;
-        line-height: 0.12;
+        line-height: 100%;
         color: rgba($text-color, 0.15);
+
+        @include desktop {
+            font-size: 300px;
+            right: -120px;
+        }
+        @include phones {
+            display: none;
+        }
     }
-    &__title {
+    &__info-title {
         font-size: 30px;
         font-weight: bold;
         line-height: 1.6;
@@ -138,5 +190,6 @@
         width: 15px;
         height: 15px;
         margin-right: 20px;
+
     }
 }

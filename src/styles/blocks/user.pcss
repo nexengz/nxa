@@ -1,22 +1,42 @@
 .user {
     justify-content: center;
 
+    @include tablets {
+        justify-content: flex-start;
+    }
+
     &__avatar {
         display: flex;
         flex-direction: row-reverse;
         margin-bottom: 65px;
+
+        @include tablets {
+            flex-direction: row;
+        }
+        @include phones {
+            justify-content: center;
+            margin-bottom: 20px;
+        }
     }
     &__avatar-pic {
         width: 200px;
         height: 200px;
         display: inline-block;
         border-radius: 50%;
+        @include tablets {
+            margin-right: 20px;
+        }
     }
     &__data {
         padding-left: 25px;
         flex: 1;
         display: flex;
         flex-direction: row-reverse;
+
+        @include tablets {
+            flex-direction: row;
+            padding: 0;
+        }
     }
     &__name {
         font-size: 18px;

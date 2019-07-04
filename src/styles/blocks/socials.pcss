@@ -1,9 +1,23 @@
 .socials {
     display: flex;
     align-items: center;
+    order: 1;
+
+    &--header {
+        @include tablets {
+            flex: 0.7;
+            justify-content: flex-end;
+        }
+        @include phones {
+            display: none;
+        }
+    }
 
     &__item {
         margin-right: 40px;
+        @include desktop {
+            margin-right: 50px;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -50,6 +64,11 @@
                     fill: $main-color;
                     transition: 0.2s ease-in-out all;
                 }
+            }
+
+            @include phones {
+                width: 60px;
+                height: 60px;
             }
         }
         .socials__icon {

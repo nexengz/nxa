@@ -2,5 +2,12 @@
 
     &--works {
         padding: 0 0 100px;
+        @include tablets {
+            padding: 20px;
+        }
+        @include phones {
+            padding: 0;
+            width: 100%;
+        }
     }
 }

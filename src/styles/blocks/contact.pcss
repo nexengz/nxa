@@ -4,6 +4,14 @@
     width: 60%;
     padding: 70px 0;
 
+    @include desktop {
+        width: 80%;
+    }
+    @include tablets {
+        width: 100%;
+        padding: 50px 0 100px;
+    }
+
     &__wrapper {
         font-size: 16px;
         font-weight: 600;
@@ -15,6 +23,11 @@
         display: block;
         position: relative;
 
+        @include phones {
+            width: 90%;
+            margin: 0 auto 20px;
+        }
+
         &--name {
             margin-right: 6%;
         }
@@ -24,6 +37,12 @@
         &--text {
             width: 100%;
             margin-bottom: 55px;
+            @include tablets {
+                margin-bottom: 20px;
+            }
+            @include phones {
+                width: 90%;
+            }
         }
         &:hover .contact__input, .contact__input:focus {
             border-color: $main-color;
@@ -63,6 +82,9 @@
             padding-bottom: 15px;
 
         }
+        @include phones {
+            font-size: 14px;
+        }
     }
     &__submit-button {
         width: 40%;
@@ -80,6 +102,19 @@
         &:hover {
             background-image: linear-gradient(to right, rgb(187,0,255) 0%, rgb(138,0,255) 48%, rgb(89,0,255) 100%);
             transition: 0.2s ease-in-out all;
+        }
+        @include tablets {
+            margin: 0 auto;
+            width: 50%;
+            height: 90px;
+            border-top-left-radius: 45px;
+            border-bottom-right-radius: 45px;
+        }
+        @include phones {
+            width: 90%;
+            height: 70px;
+            border-top-left-radius: 35px;
+            border-bottom-right-radius: 35px;
         }
     }
     &__icon-wrapper {

@@ -2,19 +2,67 @@ import "./styles/main.pcss";
 if (process.env.NODE_ENV === "development") {
   require("file-loader!./index.pug");
 }
-
 import "./scripts/skills";
+import Vue from 'vue';
+import Flickity from 'vue-flickity';
+
+new Vue({
+  el: '.reviews',
+  components: {
+    Flickity
+  },
+
+  data() {
+    return {
+      flickityOptions: {
+        initialIndex: 0,
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: false,
+        groupCells: true,
+        freeScroll: false,
+        contain: true,
+        selectedAttraction: 0.2,
+        friction: 0.8
+      }
+    }
+  },
+
+  methods: {
+    next() {
+      this.$refs.flickity.next();
+    },
+
+    previous() {
+      this.$refs.flickity.previous();
+    },
+    checkArrows() {
+      if (this.$refs.flickity.selectedIndex() == 0) {
+        this.$el.querySelector('.reviews-slider__control--left').disabled = true;
+      } else if (this.$refs.flickity.selectedIndex() == this.$refs.flickity.slides().length - 1) {
+        this.$el.querySelector('.reviews-slider__control--right').disabled = true;
+      } else {
+        this.$el.querySelector('.reviews-slider__control--left').disabled = false;
+        this.$el.querySelector('.reviews-slider__control--right').disabled = false;
+      }
+    }
+
+  }
+});
+
 
 var parallax = (function () {
-  var bg1 = document.querySelector('.parallax-header__item--1'),
-    bg2 = document.querySelector('.parallax-header__item--2'),
-    bg3 = document.querySelector('.parallax-header__item--3'),
-    bg4 = document.querySelector('.parallax-header__item--4'),
-    bg5 = document.querySelector('.parallax-header__item--5'),
-    bg6 = document.querySelector('.parallax-header__item--6'),
-    bg7 = document.querySelector('.parallax-header__item--7');
-
-  console.log('a');
+  var ph1 = document.querySelector('.parallax-header__item--1'),
+      ph2 = document.querySelector('.parallax-header__item--2'),
+      ph3 = document.querySelector('.parallax-header__item--3'),
+      ph4 = document.querySelector('.parallax-header__item--4'),
+      ph5 = document.querySelector('.parallax-header__item--5'),
+      ph6 = document.querySelector('.parallax-header__item--6'),
+      pf1 = document.querySelector('.parallax-footer__item--1'),
+      pf2 = document.querySelector('.parallax-footer__item--2'),
+      pf3 = document.querySelector('.parallax-footer__item--3'),
+      pf4 = document.querySelector('.parallax-footer__item--4'),
+      pf5 = document.querySelector('.parallax-footer__item--5');
 
 
   return {
@@ -27,19 +75,37 @@ var parallax = (function () {
       style.webkitTransform = transformString;
     },
     init: function (wScroll) {
-      this.move(bg1, wScroll, 210);
-      this.move(bg2, wScroll, 180);
-      this.move(bg3, wScroll, 150);
-      this.move(bg4, wScroll, 120);
-      this.move(bg5, wScroll, 90);
-      this.move(bg6, wScroll, 60);
-      this.move(bg7, wScroll, 30);
+      var bottomOffset = getOffsets('bottom-section').top,
+          welcomeOffset = getOffsets('welcome-section').bottom;
+
+      if (welcomeOffset > 0) {
+        this.move(ph1, wScroll, 350);
+        this.move(ph2, wScroll, 300);
+        this.move(ph3, wScroll, 100);
+        this.move(ph4, wScroll, 60);
+        this.move(ph5, wScroll, 250);
+        this.move(ph6, wScroll, 250);
+      }
+
+      if (bottomOffset < 0) {
+        this.move(pf1, bottomOffset, 300);
+        this.move(pf2, bottomOffset, 150);
+        this.move(pf3, bottomOffset, 400);
+        this.move(pf4, bottomOffset, 250);
+        this.move(pf5, bottomOffset, 100);
+      }
     }
+
   }
-});
+}());
+
+function getOffsets(block) {
+  var element = document.querySelector('.'+block),
+    rect = element.getBoundingClientRect();
+  return rect;
+}
 
 window.onscroll = function() {
   var wScroll = window.pageYOffset;
-  parallax.init(wScroll)
-  //console.log(wScroll);
+  parallax.init(wScroll);
 }

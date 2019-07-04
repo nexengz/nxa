@@ -18,6 +18,7 @@ include ./mixins.pug
   ];
 
 //- html
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -28,7 +29,6 @@ html(lang="ru")
   body
     .wrapper
       .maicontent
-
         .welcome-section
           include components/parallax-header
           include components/front
@@ -38,7 +38,9 @@ html(lang="ru")
         include components/works
 
         .bottom-section
+          include components/parallax-footer
           include components/reviews
           include components/form
 
         include components/footer
+

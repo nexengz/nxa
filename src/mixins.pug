@@ -19,3 +19,5 @@ mixin nav(mod, data)
       each item in data
         li.nav__item
           a(href=`${item.link}`).nav__link #{item.title}
+    .nav__mobile-link
+      +icon('menu','nav__mobile-link-icon')

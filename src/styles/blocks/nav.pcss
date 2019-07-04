@@ -1,11 +1,11 @@
 .nav {
-    flex: 1;
     display: flex;
     justify-content: center;
 
     &__list {
         display: flex;
         align-items: center;
+
     }
     &__item {
         height: 100%;
@@ -30,20 +30,74 @@
         display: block;
         line-height: 50px;
     }
+    &__mobile-link {
+        padding: 10px;
+        display: none;
+
+        @include tablets {
+            display: flex;
+            align-self: stretch;
+        }
+    }
+    &__mobile-link-icon {
+        width: 25px;
+        height: 25px;
+        fill: $text-color;
+        transition: 0.2s ease-in-out all;
+        &:hover {
+            fill: $main-color;
+            transition: 0.2s ease-in-out all;
+        }
+    }
 
     &--footer {
         margin-bottom: 60px;
-        justify-content: left;
+        justify-content: flex-start;
         margin-left: -30px;
+        margin-top: -20px;
+        @include tablets {
+            margin-bottom: 40px;
+        }
+        @include phones {
+            margin-bottom: 30px;
+        }
 
+        .nav__list {
+            flex-wrap: wrap;
+        }
         .nav__item {
             color: #fff;
             transition: 0.2s ease-in-out all;
+            @include tablets {
+                height: 50%;
+            }
+            @include phones {
+                height: 25%;
+                width: 50%;
+            }
         }
         .nav__item:hover {
-            color: $main-color;
+            color: $ main-color;
             transition: 0.2s ease-in-out all;
         }
+        .nav__link {
+
+        }
+        .nav__mobile-link {
+           display: none;
+        }
+    }
+    &--header {
+        @include tablets {
+            order: 2;
+        }
+        .nav__list {
+            @include tablets {
+                display: none;
+            }
+        }
+
+
     }
 }
 
