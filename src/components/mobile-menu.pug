@@ -1,0 +1,6 @@
+.mobile-menu.mobile-menu--hidden(ref='mobile-menu')
+    .mobile-menu__container
+        +nav('mobile', menu)
+        +socials('mobile', socials)
+    button.mobile-menu__close(@click="toggleMenu")
+        +icon('cross','mobile-menu__close-icon')

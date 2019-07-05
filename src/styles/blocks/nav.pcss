@@ -30,26 +30,6 @@
         display: block;
         line-height: 50px;
     }
-    &__mobile-link {
-        padding: 10px;
-        display: none;
-
-        @include tablets {
-            display: flex;
-            align-self: stretch;
-        }
-    }
-    &__mobile-link-icon {
-        width: 25px;
-        height: 25px;
-        fill: $text-color;
-        transition: 0.2s ease-in-out all;
-        &:hover {
-            fill: $main-color;
-            transition: 0.2s ease-in-out all;
-        }
-    }
-
     &--footer {
         margin-bottom: 60px;
         justify-content: flex-start;
@@ -83,9 +63,6 @@
         .nav__link {
 
         }
-        .nav__mobile-link {
-           display: none;
-        }
     }
     &--header {
         @include tablets {
@@ -98,6 +75,24 @@
         }
 
 
+    }
+    &--mobile {
+        flex-direction: column;
+
+        .nav__list {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            margin-top: -20px;
+        }
+        .nav__link {
+            height: 54px;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: bold;
+
+        }
     }
 }
 

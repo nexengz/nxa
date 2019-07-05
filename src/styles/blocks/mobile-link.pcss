@@ -1,0 +1,23 @@
+.mobile-link {
+    padding: 10px;
+    display: none;
+    outline: none;
+    background: transparent;
+    order: 3;
+
+    @include tablets {
+        display: flex;
+        align-self: stretch;
+    }
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+        fill: $text-color;
+        transition: 0.2s ease-in-out all;
+        &:hover {
+            fill: $main-color;
+            transition: 0.2s ease-in-out all;
+        }
+    }
+}

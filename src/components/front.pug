@@ -4,6 +4,10 @@ section.front
             a.logo BA
             +nav('header', menu)
             +socials('header', socials)
+            include mobile-menu
+            button.mobile-link(@click="toggleMenu")
+                +icon('menu','mobile-link__icon')
+
         .front__content
             .user-info
                 .user-info__desc Личный сайт<br />веб разработчика
