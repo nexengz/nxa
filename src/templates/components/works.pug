@@ -1,0 +1,60 @@
+script(type="text/x-template")#slider-container
+    .slider
+        //pre {{works}}
+        sliderDisplay(
+            :works="works"
+            :currentWork="currentWork"
+            :currentIndex="currentIndex"
+            @slide="handleSlide"
+            )
+        sliderInfo(
+            :currentWork="currentWork"
+            )
+
+
+script(type="text/x-template")#slider-display
+    .slider__content--left
+        .slider__wrapper
+            .slider__inner-wrapper(:data-slide="currentIndex + 1")
+                .slider__active-image
+                    img(:src="currentWork.photo").slider__active-image-img
+                    sliderThumbs(
+                        :currentWork="currentWork"
+                        :works="reversedWorks"
+                        @slide="direction => $emit('slide',direction)"
+                        )
+            //.slider__current-number 4
+
+
+script(type="text/x-template")#slider-thumbs
+    .slider__slides
+         .slider__slide(
+             v-for="work in works"
+             :class="{'slider__slide--active': work.id === currentWork.id}"
+             )
+             img(:src="work.photo").slider__slide-image
+         sliderButtons(@slide="direction => $emit('slide',direction)")
+
+script(type="text/x-template")#slider-buttons
+    .slider__nav
+        a(@click.prevent="$emit('slide', 'prev')").slider__nav-button.slider__nav-button--right
+            +icon('arrow-down', 'slider__nav-button-icon')
+        a(@click.prevent="$emit('slide', 'next')").slider__nav-button.slider__nav-button--left
+            +icon('arrow-down', 'slider__nav-button-icon')
+
+script(type="text/x-template")#slider-info
+    .slider__content--right
+        .slider__wrapper
+            sliderTags(:tags="tagsArray")
+            h3.slider__info-title {{currentWork.title}}
+            .slider__info {{currentWork.desc}}
+            .slider__link
+                a(:href="currentWork.link" :title="currentWork.title" target="_blank").slider__link-item
+                    +icon('link', 'slider__link-item-img')
+                    | Посмотреть сайт
+
+script(type="text/x-template")#slider-tags
+    ul.slider__tags
+        li.slider__tags-item(v-for="tag in tags") {{tag}}
+
+

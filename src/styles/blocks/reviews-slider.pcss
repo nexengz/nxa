@@ -2,6 +2,7 @@
     display: flex;
     width: 70%;
     @include tablets {
+        width: 100%;
         justify-content: space-around;
     }
 
@@ -16,6 +17,7 @@
             justify-content: center;
             margin-top: 30px;
         }
+        
     }
     &__control {
         width: 50px;
@@ -45,6 +47,9 @@
                 background: transparent;
             }
         }
+        &:focus {
+            outline: none;
+        }
         &:hover .reviews-slider__control-arrow-icon {
             fill: #fff;
             transition: 0.2s ease-in-out all;
@@ -63,7 +68,6 @@
     &__item {
         position: relative;
         width: 50%;
-        flex: 0.35;
         display: flex;
 
         @include phones {

@@ -1,37 +1,9 @@
-- var tags = ['HTML5', 'CSS3', 'JavaScript'];
-- var sliderImages = [ ['4', ''], ['3', ''], ['2', ''] , ['1', 'slider__slide--active'] ];
 
 section.works
     .container.container--works
         .works__title
             h2.section-title Мои работы
-        .slider
-            .slider__content--left
-                .slider__wrapper
-                    .slider__inner-wrapper
-                        .slider__active-image
-                            +image('content/'+sliderImages[3][0]+'.jpg', 'slider__active-image-img')
-                        .slider__slides
-                            each sliderImage in sliderImages
-                                .slider__slide(class=`${sliderImage[1]}`)
-                                    +image('content/'+sliderImage[0]+'.jpg', 'slider__slide-image')
-                            .slider__nav
-                                .slider__nav-button.slider__nav-button--up
-                                    +icon('arrow-down', 'slider__nav-button-icon')
-                                .slider__nav-button.slider__nav-button--down
-                                    +icon('arrow-down', 'slider__nav-button-icon')
-                    .slider__current-number 4
-            .slider__content--right
-                .slider__wrapper
-                    ul.slider__tags
-                        each tag in tags
-                            li.slider__tags-item #{tag}
-                    h3.slider__info-title Сайт компании
-                    .slider__info Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eveniet, fuga fugiat illum incidunt itaque nam necessitatibus nihil nostrum numquam optio perferendis possimus quidem recusandae sed suscipit veritatis voluptatem!
-                    .slider__link
-                        a(href="" title="" target="_blank").slider__link-item
-                            +icon('link', 'slider__link-item-img')
-                            | Посмотреть сайт
+        #slider-component
 .triangles.triangles--second
     svg.triangles__item.triangles__item--left(viewBox="0 0 1000 100" preserveAspectRatio="none")
         polygon(

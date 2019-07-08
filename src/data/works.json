@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "1 майт школы онлайн образования",
+    "skills": "Html, Css, Javascript",
+    "photo": "1.jpg",
+    "link": "//google.com",
+    "desc": "1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eveniet, fuga fugiat illum incidunt itaque nam necessitatibus nihil nostrum numquam optio perferendis possimus quidem recusandae sed suscipit veritatis voluptatem!"
+  },
+  {
+    "id": 2,
+    "title": "2 майт школы онлайн образования",
+    "skills": "5Html, Css, Javascript",
+    "photo": "2.jpg",
+    "link": "//google.com",
+    "desc": "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eveniet, fuga fugiat illum incidunt itaque nam necessitatibus nihil nostrum numquam optio perferendis possimus quidem recusandae sed suscipit veritatis voluptatem!"
+  },
+  {
+    "id": 3,
+    "title": "3 майт школы онлайн образования",
+    "skills": "3Html, Css, Javascript",
+    "photo": "3.jpg",
+    "link": "//google.com",
+    "desc": "3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eveniet, fuga fugiat illum incidunt itaque nam necessitatibus nihil nostrum numquam optio perferendis possimus quidem recusandae sed suscipit veritatis voluptatem!"
+  },
+  {
+    "id": 4,
+    "title": "4 майт школы онлайн образования",
+    "skills": "4Html, Css, Javascript",
+    "photo": "4.jpg",
+    "link": "//google.com",
+    "desc": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eveniet, fuga fugiat illum incidunt itaque nam necessitatibus nihil nostrum numquam optio perferendis possimus quidem recusandae sed suscipit veritatis voluptatem!"
+  },
+  {
+    "id": 5,
+    "title": "5 майт школы онлайн образования",
+    "skills": "5Html, Css, Javascript",
+    "photo": "5.jpg",
+    "link": "//google.com",
+    "desc": "5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur eveniet, fuga fugiat illum incidunt itaque nam necessitatibus nihil nostrum numquam optio perferendis possimus quidem recusandae sed suscipit veritatis voluptatem!"
+  }
+]
