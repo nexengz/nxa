@@ -8,3 +8,4 @@ import "./scripts/mobile-menu";
 import "./scripts/parallax";
 import "./scripts/reviews";
 import "./scripts/works";
+import "./scripts/contact";

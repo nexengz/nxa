@@ -34,7 +34,7 @@
         &--email {
 
         }
-        &--text {
+        &--message {
             width: 100%;
             margin-bottom: 55px;
             @include tablets {
@@ -52,14 +52,56 @@
             fill: $main-color;
             transition: 0.2s ease-in-out all;
         }
+        &.error .contact__input {
+            border-color: $red-color;
+            transition: 0.2s ease-in-out all;
+        }
+        &.error .contact__tooltip {
+            display: block;
+            opacity: 1;
+            left: 50px;
+            transition: 0.2s ease-in-out all;
+        }
+        &.error .contact__icon {
+            fill: $red-color;
+            transition: 0.2s ease-in-out all;
+        }
+
     }
     &__label {
         padding-left: 50px;
         margin-bottom: 5px;
         display: block;
     }
+    &__tooltip {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+        background: $red-color;
+        font-size: 14px;
+        font-weight: normal;
+        color: #ffffff;
+        padding: 3px 15px;
+        opacity: 0;
+        &:before {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateY(-100%);
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 7.5px 7px 7.5px;
+            border-color: transparent transparent $red-color transparent;
+        }
+    }
     &__input {
         width: 100%;
+        min-width: 100%;
+        max-width: 100%;
         border: 0;
         background: transparent;
         border-bottom: 1px solid $text-color;
@@ -70,6 +112,7 @@
         color: $text-color;
         outline: none;
         transition: 0.2s ease-in-out all;
+        display: block;
 
         &--name {
 
@@ -77,7 +120,7 @@
         &--email {
 
         }
-        &--text {
+        &--message {
             line-height: 2;
             padding-bottom: 15px;
 
@@ -90,7 +133,6 @@
         width: 40%;
         height: 80px;
         background-image: linear-gradient(to right, rgb(173,0,237) 0%, rgb(129,0,240) 48%, rgb(85,0,242) 100%);
-        background-image: -moz-linear-gradient( 0deg, rgb(173,0,237) 0%, rgb(129,0,240) 48%, rgb(85,0,242) 100%);
         font-size: 18px;
         font-weight: bold;
         color: #ffffff;
