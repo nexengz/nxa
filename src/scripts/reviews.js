@@ -3,6 +3,7 @@ import Flickity from 'vue-flickity';
 
 new Vue({
     el: '.reviews',
+    template: '#reviews',
     components: {
         Flickity
     },
@@ -13,6 +14,7 @@ new Vue({
 
     data() {
         return {
+            reviews: [],
             flickityOptions: {
                 initialIndex: 0,
                 prevNextButtons: false,
@@ -28,6 +30,13 @@ new Vue({
     },
 
     methods: {
+        modifyImages(array) {
+            return array.map(item => {
+                const requredPic = require(`../images/content/${item["pic"]}`);
+                item["pic"] = requredPic;
+                return item;
+            });
+        },
         next() {
             this.$refs.flickity.next();
         },
@@ -45,5 +54,9 @@ new Vue({
                 this.$el.querySelector('.reviews-slider__control--right').disabled = false;
             }
         }
+    },
+    created() {
+        const reviews = require('../data/reviews.json');
+        this.reviews = this.modifyImages(reviews);
     }
 });

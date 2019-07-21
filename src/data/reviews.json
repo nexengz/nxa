@@ -1,0 +1,51 @@
+[
+  {
+    "id": 0,
+    "text": "1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium",
+    "name": "Ковальчук Дмитрий",
+    "title": "Основатель Loftschool",
+    "pic": "user.jpg"
+  },
+  {
+    "id": 1,
+    "text": "2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium",
+    "name": "Ковальчук Дмитрий",
+    "title": "Основатель Loftschool",
+    "pic": "user.jpg"
+  },
+  {
+    "id": 2,
+    "text": "3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium",
+    "name": "Ковальчук Дмитрий",
+    "title": "Основатель Loftschool",
+    "pic": "user.jpg"
+  },
+  {
+    "id": 3,
+    "text": "4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium",
+    "name": "Ковальчук Дмитрий",
+    "title": "Основатель Loftschool",
+    "pic": "user.jpg"
+  },
+  {
+    "id": 4,
+    "text": "5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium",
+    "name": "Ковальчук Дмитрий",
+    "title": "Основатель Loftschool",
+    "pic": "user.jpg"
+  },
+  {
+    "id": 5,
+    "text": "6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium",
+    "name": "Ковальчук Дмитрий",
+    "title": "Основатель Loftschool",
+    "pic": "user.jpg"
+  },
+  {
+    "id": 6,
+    "text": "7 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi aspernatur assumenda, cumque doloremque earum eveniet fugiat laudantium",
+    "name": "Ковальчук Дмитрий",
+    "title": "Основатель Loftschool",
+    "pic": "user.jpg"
+  }
+]
